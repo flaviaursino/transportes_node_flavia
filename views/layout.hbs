@@ -1,10 +1,43 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>{{title}}</title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{title}}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="stylesheets/normalize.css">
+  <link rel="stylesheet" href="stylesheets/transportes.css">
+</head>
+
+<body>
+  <header>
+    <div class="holder">
+      <img src="images/logo.png" alt="transportes X" width="100">
+      <h1>Transportes X</h1>
+    </div>
+  </header>
+  <nav>
+    <ul class="holder">
+      <li><a class="{{#if isHome}}activo{{/if}}" href="/">Home</a></li>
+      <li><a class="{{#if isNosotros}}activo{{/if}}" href="/nosotros">Nosotros</a></li>
+      <li><a class="{{#if isServicios}}activo{{/if}}" href="/servicios">Servicios</a></li>
+      <li><a class="{{#if isGaleria}}activo{{/if}}" href="/galeria">Galeria</a></li>
+      <li><a class="{{#if isNovedades}}activo{{/if}}" href="/novedades">Novedades</a></li>
+      <li><a class="{{#if isContacto}}activo{{/if}}" href="/contacto">Contacto</a></li>
+    </ul>
+
+  </nav>
+  <main class="holder">
     {{{body}}}
-  </body>
+  </main>
+  <footer>
+    <p>Diseñado por Flavia - año</p>
+  </footer>
+
+</body>
+
 </html>
