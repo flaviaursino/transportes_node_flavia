@@ -22,6 +22,7 @@ router.get('/agregar', (req, res, next) => {
     })
 })
 
+/*agregar la novedad */
 router.post('/agregar', async (req,res,next) =>{
     //console.log(req.body)
     try{
@@ -43,7 +44,15 @@ router.post('/agregar', async (req,res,next) =>{
             message: 'No se carga la novedad'
         })
     }
-
 })
+
+/*eliminar la novedad*/
+router.get('/eliminar/:id', async (req,res,next) =>{
+    //console.log(req.params.id);
+    var id = req.params.id;
+    await novedadesModel.deleteNovedadByID(id);
+    res.redirect('/admin/novedades')
+})
+
 
 module.exports = router;
